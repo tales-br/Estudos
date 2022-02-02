@@ -3,14 +3,14 @@
 - [`x`] - Fundamentos
 - [`x`] - Estruturas de controle
 - [`x`] - Funções
-- [] - Lista de Exercício  §
+- [] - Lista de Exercício completada (0%)
 
 
 # Aprender Git
 
 - [`x`] - Listagem de comandos básicos mais usados
-- [] - Criar repositório / Hello World
-- [] - Add / Commit 
+- [`x`] - Criar repositório / Hello World
+- [`x`] - Add / Commit 
 - [] - Criar branch
 - [] - Merge
 - [] - Linhas do tempo limpas
