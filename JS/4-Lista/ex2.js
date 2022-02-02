@@ -8,5 +8,22 @@ ao tamanho de seus lados. (Neste exemplo deve-se abstrair as condições matemá
 triângulo).
 */
 
-const lado1, lado2, lado3
+function tipoTriangulo (lado1, lado2, lado3){
+    if(lado1==lado2==lado3)
+    {
+        return `O triângulo é equilátero.`
+    }
+    else
+    {
+        if(lado1 != lado2 && lado1 != lado3 && lado2 != lado3)
+        {
+            return `O triângulo é escaleno.`
+        }
+        else
+        {
+            return `O triângulo é isóceles.`
+        }
+    }
+}
 
+console.log(tipoTriangulo(3,2,1))
