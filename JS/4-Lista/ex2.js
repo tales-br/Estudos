@@ -27,3 +27,5 @@ function tipoTriangulo (lado1, lado2, lado3){
 }
 
 console.log(tipoTriangulo(3,2,1))
+console.log(tipoTriangulo(3,3,1))
+console.log(tipoTriangulo(3,3,3))
