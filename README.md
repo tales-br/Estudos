@@ -3,17 +3,18 @@
 - [`x`] - Fundamentos
 - [`x`] - Estruturas de controle
 - [`x`] - Funções
-- [] - Lista de Exercício completada (0%)
+- [` `] - Lista de Exercício completada (12,50%)
 
 
 # Aprender Git
 
+-((https://www.youtube.com/watch?v=2alg7MQ6_sI))
 - [`x`] - Listagem de comandos básicos mais usados
 - [`x`] - Criar repositório / Hello World
 - [`x`] - Add / Commit 
-- [] - Criar branch
-- [] - Merge
-- [] - Linhas do tempo limpas
+- [` `] - Criar branch
+- [` `] - Merge
+- [` `] - Linhas do tempo limpas
 
     =>Git Commands - Road so far..
 * `git init` //Inicia a linha do tempo
