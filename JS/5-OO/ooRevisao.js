@@ -62,4 +62,4 @@ delete carro.calculaValorSeguro
 
 console.log(carro)
 console.log(carro.condutores)
-console.log(carro.condutores.length)
+//console.log(carro.condutores.length)
