@@ -3,12 +3,15 @@
 - [`x`] - Fundamentos
 - [`x`] - Estruturas de controle
 - [`x`] - Funções
-- [` `] - Lista de Exercício completada (12,50%)
+- [` `] - Lista de Exercícios 1 (função) completada (37,50%)
 
 
 # Aprender Git
 
--((https://www.youtube.com/watch?v=2alg7MQ6_sI))
+* Fontes
+- ProGit: https://git-scm.com/book/pt-br/v2
+- Youtuber: https://www.youtube.com/watch?v=2alg7MQ6_sI
+
 - [`x`] - Listagem de comandos básicos mais usados
 - [`x`] - Criar repositório / Hello World
 - [`x`] - Add / Commit 
