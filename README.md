@@ -3,7 +3,7 @@
 - [`x`] - Fundamentos
 - [`x`] - Estruturas de controle
 - [`x`] - Funções
-- [` `] - Lista de Exercícios 1 (função) completada (37,50%)
+- [` `] - Lista de Exercícios 1 (função) completada (55,00%)
 
 
 # Aprender Git
@@ -17,7 +17,7 @@
 - [`x`] - Add / Commit 
 - [` `] - Criar branch
 - [` `] - Merge
-- [` `] - Linhas do tempo limpas
+- [`x`] - Linhas do tempo limpas
 
     =>Git Commands - Road so far..
 * `git init` //Inicia a linha do tempo
