@@ -15,8 +15,11 @@ function sacarDinheiro(valorSaque)
     let contador1 = 0
     let valorNota = calcularValorNota(valorSaque) //start
 
-    while (valorSaque >= valorNota) {
-        switch (valorNota) {
+    while (valorSaque >= valorNota) 
+    {
+
+        switch (valorNota)
+        {
             case 100:
                 valorSaque -= 100
                 contador100++
@@ -40,8 +43,8 @@ function sacarDinheiro(valorSaque)
         }
 
         valorNota = calcularValorNota(valorSaque)
-
     }
+
     return elaborarResultado(contador100, contador50, contador10, contador5, contador1)
 }
 
