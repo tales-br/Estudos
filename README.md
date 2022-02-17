@@ -1,9 +1,16 @@
+# Estudo de JAVA (2022)
+
+- [`x`] - Adicionado Branch
+- [` `] - Organização de exercícios em aula
+- [` `] - Trabalhos e provas
+
 # Estudo de JS (2022)
 
 - [`x`] - Fundamentos
 - [`x`] - Estruturas de controle
 - [`x`] - Funções
 - [` `] - Lista de Exercícios 1 (função) completada (55,00%)
+- [` `] - OO
 
 
 # Aprender Git
@@ -15,7 +22,7 @@
 - [`x`] - Listagem de comandos básicos mais usados
 - [`x`] - Criar repositório / Hello World
 - [`x`] - Add / Commit 
-- [` `] - Criar branch
+- [`x`] - Criar branch
 - [` `] - Merge
 - [`x`] - Linhas do tempo limpas
 
