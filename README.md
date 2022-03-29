@@ -1,21 +1,34 @@
+# Estudo de C/C++/C# (2022)
+
+- [` `] - Resolução dos trabalhos acadêmicos 2022 (C ou C++) - {50%}
+- [` `] - Início dos estudos de C#
+
+# Estudo de JAVA (2022)
+
+- [`x`] - Adicionado Branch
+- [` `] - Organização de exercícios em aula
+- [` `] - Trabalhos e provas
+
 # Estudo de JS (2022)
 
 - [`x`] - Fundamentos
 - [`x`] - Estruturas de controle
 - [`x`] - Funções
 - [` `] - Lista de Exercícios 1 (função) completada (55,00%)
+- [` `] - OO
 
 
 # Aprender Git
 
 * Fontes
 - ProGit: https://git-scm.com/book/pt-br/v2
-- Youtuber: https://www.youtube.com/watch?v=2alg7MQ6_sI
+- Youtube: https://www.youtube.com/watch?v=2alg7MQ6_sI
 
+- [`x`] - Baixar ebook
 - [`x`] - Listagem de comandos básicos mais usados
 - [`x`] - Criar repositório / Hello World
 - [`x`] - Add / Commit 
-- [` `] - Criar branch
+- [`x`] - Criar branch
 - [` `] - Merge
 - [`x`] - Linhas do tempo limpas
 
