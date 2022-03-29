@@ -102,7 +102,7 @@ int menu(int *vetPar, int *vetImpar, int *inicio)
 	//enfeitando o pav�o kkkk
 	if(inicio == 0)
 	{
-		cout<<"AL2 - 2022/1"<<endl;
+		cout<<"QUESTAO 1)\tAL2 - 2022/1"<<endl;
 		cout<<endl<<endl<<"Para o presente trabalho, usamos o inteiro \"777\" para ser uma referencia de vetor \"limpo\""<<endl<<endl;
 		limpa_vet(vetPar);
 		limpa_vet(vetImpar);
@@ -120,7 +120,6 @@ do
 	{
 		case 1:
 			escreve_vet(vetPar, vetImpar);
-			mostra_vet(vetImpar);
 			
 			cout<<"\n\tVetores escritos!\n";
 			system("pause");

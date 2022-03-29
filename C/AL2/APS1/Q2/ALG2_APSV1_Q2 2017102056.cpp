@@ -67,7 +67,7 @@ void escreve_vet(float *vetPar, float*vetImpar)
     }
 }
 
-void mostra_vet (int *vet)
+void mostra_vet (float *vet)
 {
     for (int i=0;i<Max; i++)
     {
@@ -77,7 +77,7 @@ void mostra_vet (int *vet)
     }
 }
 
-void limpa_vet (int *vet)
+void limpa_vet (float *vet)
 {
     for (int i=0;i<Max; i++)
     {
@@ -95,7 +95,7 @@ int menu(float *vetPar, float *vetImpar, int *inicio)
 	
 	if(inicio == 0)
 	{
-		cout<<"AL2 - 2022/1"<<endl;
+		cout<<"QUESTAO 2)\tAL2 - 2022/1"<<endl;
 		cout<<endl<<endl<<"Para o presente trabalho, usamos o inteiro \"777\" para ser uma referencia de vetor \"limpo\""<<endl<<endl;
 		limpa_vet(vetPar);
 		limpa_vet(vetImpar);
@@ -113,7 +113,6 @@ do
 	{
 		case 1:
 			escreve_vet(vetPar, vetImpar);
-			mostra_vet(vetImpar);
 			
 			cout<<"\n\tVetores escritos!\n";
 			system("pause");
