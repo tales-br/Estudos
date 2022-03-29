@@ -23,7 +23,7 @@
 - [`x`] - Criar repositório / Hello World
 - [`x`] - Add / Commit 
 - [`x`] - Criar branch
-- [` `] - Merge
+- [`x`] - Merge
 - [`x`] - Linhas do tempo limpas
 
     =>Git Commands - Road so far..
