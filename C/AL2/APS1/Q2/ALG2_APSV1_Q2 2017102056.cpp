@@ -5,7 +5,20 @@ o primeiro (vetor X) com os elementos de ordem par, e o segundo (vetor Y) com os
 
 /*
 Date: 29/03/2022
-Author: Tales Barbosa Rodrigues
+Authors:
+
+Nome:		Arthur de Oliveira Alves
+Matrícula:	2020102009
+
+Nome:		Jefferson Rocha da Silva Teixeira 
+Matrícula:	2021200604
+
+Nome:		Luis Fernando Da Silva Santos
+Matrícula:	2011100768
+
+Nome:		Tales Barbosa Rodrigues 
+Matrícula:	2017102056
+
 Github: github.com/tales-br/Estudos/C
 */
 

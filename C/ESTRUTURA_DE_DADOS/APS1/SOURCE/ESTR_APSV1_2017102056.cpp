@@ -62,7 +62,7 @@ IMPLEMENTAÇÃO - VETOR DE 10 POSIÇÕES DE INTEIRO.
 
 /*
 Start: 29/03/2022
-End: 30/03/2022
+End: 31/03/2022
 Author: Tales Barbosa Rodrigues
 Github: github.com/tales-br/Estudos/C
 */
@@ -76,7 +76,8 @@ Relembrar
 	ponteiro (ok)
 	Ler artigo: https://www.ic.unicamp.br/~ra069320/PED/MC102/1s2008/Apostilas/Cap10.pdf (ok)
 	
-Definir quais as funções vou usar (Ok)
+Definir quais as funções vou usar (Ok) {aqui dividi as funções em funções menores - achei melhor =\}
+	Implementar () - Ex.: Apostila PUC / {Conceitos apostila estrutura de dados}
 Layout do menu igual a da prog. estrutura? N (Novo Menu)
 */
 
@@ -103,15 +104,24 @@ Forte abç
 
 const int Max = 10;
 
+typedef enum EnumEstrutura
+{
+	PESQ, PRIM, ULT
+}TipoEstrutura;
 
 using namespace std;
 
-
+typedef struct controle
+{
+	int qtdElementos;
+	struct lista* ini;
+	struct lista* fim;
+}Controle;
 
 //já define como um tipo de dado para usar no futuro
 typedef struct lista
 {
-	
+	Controle *ctrl;
 	struct lista *nxt;
 	int vlr;
 	int qntd_elementos;
@@ -119,9 +129,9 @@ typedef struct lista
 }Estrutura;
 
 
+Estrutura* iniciar (Estrutura* e);
 
 //ProtÃ³tipos
-Estrutura* start_estrutura (void); //tipo lista que retorna NULL (Estrutura* representa o primeiro elemento deste tipo)
 
 Estrutura* insere_prim (Estrutura* e, int novoInteiro); //ponteiro para estrutura (que cai na primeira posicao) e aloca o espaco de uma estrutura e aponta
 
@@ -129,7 +139,9 @@ Estrutura* retira_prim (Estrutura* e);
 
 Estrutura* retira_ult (Estrutura* e); 
 
-Estrutura* pesq_retira (Estrutura* e, int v);
+Estrutura* pesq_retira (Estrutura* e, int v, EnumEstrutura TipoEstrutura);
+
+Estrutura* ordena (Estrutura* e);
 
 void mostra_estrutura (Estrutura* e);
 
@@ -138,28 +150,57 @@ int main()
 	//O enunciado pediu para usar 3 estruturas diferentes... senão dava para usar uma só
 	Estrutura* pilha;
 	
-	pilha = start_estrutura (); // vai retornar NULL para a primeira posicao
-	pilha = insere_prim(pilha, 10);
+	pilha = iniciar(pilha);
 	
+	pilha = insere_prim(pilha, 10);
+	pilha = insere_prim(pilha, 11);
+	pilha = insere_prim(pilha, 12);
+	pilha = insere_prim(pilha, 13);
+	
+	mostra_estrutura (pilha);
+	cout<<endl;
+
+	cout<<endl;
+	
+	//pilha = pesq_retira(pilha, 0, PRIM);
+	pilha = retira_ult(pilha);
 	mostra_estrutura (pilha);
 	
 	return 0;
 }
 
 
-//retorna null para a etrutura
-Estrutura* start_estrutura (void)
+
+Estrutura* iniciar (Estrutura* e)
 {
-	return NULL;
+	e = (Estrutura*) malloc(sizeof(Estrutura));
+	Controle* x = (Controle*) malloc(sizeof(Controle));
+
+	e->ctrl = x;
+	
+	e->ctrl->qtdElementos = 0;
+	e->ctrl->ini = NULL;
+	e->ctrl->fim = e;
+
+	return e;
 }
+
 
 
 Estrutura* insere_prim (Estrutura* e, int novoInteiro)
 {
 	Estrutura* novo = (Estrutura*) malloc(sizeof(Estrutura));
-	
+	e->ctrl->ini = novo;
+		
 	novo->vlr = novoInteiro;
+
+	
 	novo->nxt = e;
+	
+	e->ctrl->qtdElementos++;
+	cout<<"\nqntd elementos:"<<e->ctrl->qtdElementos;
+
+	e->ctrl->fim = e;
 	
 	return novo;
 }
@@ -169,6 +210,11 @@ void mostra_estrutura (Estrutura* e)
 {
 	Estrutura* aux;
 	
+	if(e==NULL)
+	{
+		cout<<"\tEstrutura vazia!";
+	}
+	
 	for (aux = e; aux != NULL; aux = aux->nxt) //enquanto a variavel auxiliar não achar o NULL (última posicao) ela recebe o ponteiro do prox
 	{
 		cout<<"vlr = "<<aux->vlr<<endl;
@@ -176,41 +222,111 @@ void mostra_estrutura (Estrutura* e)
 
 }
 
-
-Estrutura* pesq_retira (Estrutura* e, int v) 
+//aqui poderia ser mais inteligente... receber um enum com o tipo de ação
+Estrutura* pesq_retira (Estrutura* e, int v, EnumEstrutura TipoEstrutura) 
 {
+
 	Estrutura* ant = NULL; //de cara o anterior tem que receber null para startar
 	
 	Estrutura* p = e; //aponta para o primeiro nó da lista (varíavel auxiliar pra percorrer)
 	
-	while (p != NULL && p->vlr!= v) 
+	switch(TipoEstrutura)
 	{
-		ant = p;
-		p = p->nxt;
-	}
-	
-	if (p == NULL)
-	{
-		return e;	
-	}
-
-	
-	if (ant == NULL)
-	{
+		case PESQ:
+			while (p != NULL && p->vlr != v)
+			{
+				ant = p;
+				p = p->nxt;
+			}
+				if (p == NULL)
+			{
+				return e;	
+			}
 		
-		e = p->nxt;
+			
+			if (ant == NULL)
+			{
+				
+				e = p->nxt;
+			
+			}
+			else
+			{
+				
+				ant->nxt = p->nxt;
+			
+			}
+			
+			break;
+		case PRIM:
+			e = retira_prim(e);
+			break;
+		case ULT:
+			break;
+		//default:
+			//throw - try - catch ... [a implementar...]
+	}
 	
+	
+	free(p);
+	return e;
+}
+
+Estrutura* retira_prim (Estrutura* e)
+{
+	if(e == NULL)
+	{
+		return e;
 	}
 	else
 	{
+		e = e->nxt;	
 		
-		ant->nxt = p->nxt;
-	
+		return e;
 	}
+
+}
+
+Estrutura* retira_ult (Estrutura* e)
+{
+	Estrutura* ant = NULL;
+	Estrutura* p = e;
+	Estrutura* aux = e;
 	
+	for (aux = e; aux != NULL; aux = aux->nxt) //enquanto a variavel auxiliar não achar o NULL (última posicao) ela recebe o ponteiro do prox
+	{
+		ant = aux;
+		cout<<"vlr = "<<aux->vlr<<endl;
+	}
+
+/*
+			while (p != NULL || p->nxt == NULL)
+			{
+
+				ant = p;
+				p = p->nxt;
+				if (p->nxt == NULL)
+				{
+					cout<<"\nFEZ\n";
+					p = ant;
+					p->nxt = NULL;
+					
+				}
+				
+				cout<<"::DEPOIS::"<<endl;
+				cout<<"Ant valor:"<<ant->vlr<<endl;
+				cout<<"Ant end prox:"<<ant->nxt<<endl;
+				cout<<"p valor:"<<p->vlr<<endl;
+				cout<<"p end prox:"<<p->nxt<<endl;
+			}
+			cout<<"\nAntes de jogar para fora!!\n";
+mostra_estrutura(p);
+cout<<"\n----\n";
+		//	e = p;
 	free(p);
-	
+	*/
 	return e;
+
 }
 
 /*
