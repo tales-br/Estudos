@@ -330,7 +330,7 @@ int menu()
 			break;
 			}
 
-			printf("\t\t\t##MENU##\n\t1- Inserir elemento\n\t2- Remover\n\t3- Mostrar\n\t4- Sair\n\nEscolha uma opcao: ");
+			printf("\t\t\t##MENU##\n\t1- Inserir elemento\n\t2- Remover\n\t3- Mostrar\n\t4- Resetar\n\t5- Sair\n\nEscolha uma opcao: ");
 
 			cin>>option;
 
@@ -395,6 +395,7 @@ int menu()
 					
 					cout<<"\n\tValor inserido!\n";
 				break;
+
 				case 3:
 					if(tipo == 1)
 						cout<<"\n\t\tSua lista:\n";
@@ -411,11 +412,30 @@ int menu()
 						mostra(pilha, flagPilha);
 					}
 				break;
+
 				case 4:
+					if(tipo == 1)
+						limpa (lista, &flagLista);
+						cout<<"\n\t\tSua lista foi limpa!\n";
+					}
+					if(tipo == 2)
+					{
+						limpa (fila, &flagFila);
+						cout<<"\n\t\tSua fila foi limpa!\n";
+					}
+					if(tipo == 3)
+					{
+						limpa (pilha, &flagPilha);
+						cout<<"\n\t\tSua pilha foi limpa!\n";
+					}
+				break;
+
+				case 5:
 					cout<<"\nRetornando\n";
 					system("pause");
 					system("cls");		
 				break;
+
 				default:
 					cout<<"\nOpcao invalida!\n";
 					system("pause");
@@ -425,7 +445,7 @@ int menu()
 			system("pause");
 			system("cls");
 
-		}while(option!=4);
+		}while(option!=5);
 	}
 	while(option!=4);
 
