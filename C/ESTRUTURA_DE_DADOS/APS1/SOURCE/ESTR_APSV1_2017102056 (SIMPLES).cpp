@@ -99,6 +99,10 @@ void limpa (int *estrutura, int *flag); //2 - ok
 
 int main ()
 {
+	cout<<"QUESTAO 1)\tAL2 - 2022/1"<<endl;
+	cout<<endl<<endl<<"Para o presente trabalho, usei NULL \"0\" para ser uma referencia de estrutura \"limpa\""<<endl<<endl;
+	getch();
+	
 	limpa (pilha, &flagPilha);
 	insere (pilha, 1, &flagPilha, PRIM);
 	insere (pilha, 2, &flagPilha, PRIM);
@@ -302,4 +306,113 @@ void retira (int *estrutura, int dado, int *flag, Opt x)
 			*flag = *flag - 1;
 		}
 	}
+}
+
+
+int menu()
+{
+	int option = 0, tipo = 0;	
+
+	system("cls");
+	
+	do
+	{
+		printf("\t\t\t##MENU##\n\t1- Lista\n\t2- Fila\n\t3- Pilha\n\t4- Sair\n\nEscolha uma opcao: ");
+
+		cin>>tipo;
+		
+		do{
+			if(tipo>4 || tipo<1)
+			{
+			cout<<"\t\t\tOpcao invalida!\n";
+			system("pause");
+			system("cls");		
+			break;
+			}
+
+			printf("\t\t\t##MENU##\n\t1- Inserir elemento\n\t2- Remover\n\t3- Mostrar\n\t4- Sair\n\nEscolha uma opcao: ");
+
+			cin>>option;
+
+			switch(option)
+			{
+				case 1:
+
+					cout<<"\t\tInforme o valor para insercao:\n";
+
+					cin>>num;
+
+					cout<<endl;
+
+					if(tipo == 1)
+					{
+						insere (lista, num, &flagLista, ORD);
+						mostra(lista, flagLista);
+					}
+					if(tipo == 2)
+					{
+						insere (fila, num, &flagFila, ULT);
+						mostra(lista, flagFila);
+					}
+					if(tipo == 3)
+					{
+						insere (pilha, num, &flagPilha, PRIM);
+						mostra(pilha, flagPilha);
+					}
+					
+					cout<<"\n\tValor inserido!\n";
+				break;
+					
+				case 2:
+
+					cout<<"\t\tRemocao:\n";
+
+					if(tipo == 1)
+					{
+						cout<<"\t\tQual valor deseja remover?\n";
+						cin>>num;
+						retira (pilha, num, &flagPilha, ORD);
+						mostra(lista, flagLista);
+					}
+					if(tipo == 2)
+					{
+						insere (fila, num, &flagFila, ULT);
+						mostra(lista, flagFila);
+					}
+					if(tipo == 3)
+					{
+						insere (pilha, num, &flagPilha, PRIM);
+						mostra(pilha, flagPilha);
+					}
+					
+					cout<<"\n\tValor inserido!\n";
+				break;
+				case 3:
+					limpa_vet (vetPar);
+					limpa_vet (vetImpar);
+					cout<<"\n\tVetores Limpos!\n";
+					system("pause");
+					system("cls");		
+				break;
+				case 4:
+					limpa_vet (vetPar);
+					limpa_vet (vetImpar);
+					cout<<"\nSaindo\n";
+					system("pause");
+					system("cls");		
+				break;
+				default:
+					cout<<"\nOpcao invalida!\n";
+					system("pause");
+					system("cls");	
+			}
+
+			system("pause");
+			system("cls");
+
+		}while(option!=4);
+	}
+	while(option!=4);
+
+return 0;
 }
