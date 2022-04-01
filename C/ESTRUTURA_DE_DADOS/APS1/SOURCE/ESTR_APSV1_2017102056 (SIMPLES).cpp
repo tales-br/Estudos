@@ -370,34 +370,49 @@ int menu()
 					if(tipo == 1)
 					{
 						cout<<"\t\tQual valor deseja remover?\n";
+
 						cin>>num;
-						retira (pilha, num, &flagPilha, ORD);
+
+						retira (lista, num, &flagLista, ORD);
+
+						cout<<"\n\t\tSua lista:\n";
 						mostra(lista, flagLista);
 					}
 					if(tipo == 2)
 					{
-						insere (fila, num, &flagFila, ULT);
+						retira (fila, num, &flagFila, PRIM);
+
+						cout<<"\n\t\tSua fila:\n";
 						mostra(lista, flagFila);
 					}
 					if(tipo == 3)
 					{
-						insere (pilha, num, &flagPilha, PRIM);
+						retira (pilha, num, &flagPilha, PRIM);
+
+						cout<<"\n\t\tSua pilha:\n";
 						mostra(pilha, flagPilha);
 					}
 					
 					cout<<"\n\tValor inserido!\n";
 				break;
 				case 3:
-					limpa_vet (vetPar);
-					limpa_vet (vetImpar);
-					cout<<"\n\tVetores Limpos!\n";
-					system("pause");
-					system("cls");		
+					if(tipo == 1)
+						cout<<"\n\t\tSua lista:\n";
+						mostra(lista, flagLista);
+					}
+					if(tipo == 2)
+					{
+						cout<<"\n\t\tSua fila:\n";
+						mostra(lista, flagFila);
+					}
+					if(tipo == 3)
+					{
+						cout<<"\n\t\tSua pilha:\n";
+						mostra(pilha, flagPilha);
+					}
 				break;
 				case 4:
-					limpa_vet (vetPar);
-					limpa_vet (vetImpar);
-					cout<<"\nSaindo\n";
+					cout<<"\nRetornando\n";
 					system("pause");
 					system("cls");		
 				break;
