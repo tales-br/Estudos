@@ -121,7 +121,7 @@ void insere (int *estrutura, int dado, int *flag, Opt x)
 
 	if(*flag == MAX)
 	{
-		cout<<"\n\t\tEstrutura cheia!"; //não deveria tratar a expception aqui (eu acho)... seria legar ter o CR nesse caso.. mas n tive tempo de implementar
+		cout<<"\n\t\tEstrutura cheia!\n"; //não deveria tratar a expception aqui (eu acho)... seria legar ter o CR nesse caso.. mas n tive tempo de implementar
 	}
 	else
 	{
@@ -230,7 +230,7 @@ void retira (int *estrutura, int dado, int *flag, Opt x)
 
 	if(*flag == 0)
 	{
-		cout<<"\n\t\tEstrutura vazia!"; //não deveria tratar a expception aqui (eu acho)... seria legar ter o CR nesse caso.. mas n tive tempo de implementar
+		cout<<"\n\t\tNao existem elementos para retirar!"; //não deveria tratar a expception aqui (eu acho)... seria legar ter o CR nesse caso.. mas n tive tempo de implementar
 	}
 	else
 	{
@@ -308,7 +308,8 @@ int menu()
 			break;
 			}
 
-			printf("\t\t\t##MENU##\n\t1- Inserir elemento\n\t2- Remover\n\t3- Mostrar\n\t4- Resetar\n\t5- Sair\n\nEscolha uma opcao: ");
+			system("cls");	
+			printf("\t\t\t##SUBMENU##\n\t1- Inserir elemento\n\t2- Remover\n\t3- Mostrar\n\t4- Resetar\n\t5- Sair\n\nEscolha uma opcao: ");
 
 			cin>>option;
 
@@ -316,10 +317,9 @@ int menu()
 			{
 				case 1:
 
-					cout<<"\t\tInforme o valor para insercao:\n";
+					cout<<"\t\tInforme o valor para insercao:";
 
 					cin>>num;
-
 					cout<<endl;
 
 					if(tipo == 1)
@@ -330,7 +330,7 @@ int menu()
 					if(tipo == 2)
 					{
 						insere (fila, num, &flagFila, ULT);
-						mostra(lista, flagFila);
+						mostra(fila, flagFila);
 					}
 					if(tipo == 3)
 					{
@@ -361,7 +361,7 @@ int menu()
 						retira (fila, num, &flagFila, PRIM);
 
 						cout<<"\n\t\tSua fila:\n";
-						mostra(lista, flagFila);
+						mostra(fila, flagFila);
 					}
 					if(tipo == 3)
 					{
