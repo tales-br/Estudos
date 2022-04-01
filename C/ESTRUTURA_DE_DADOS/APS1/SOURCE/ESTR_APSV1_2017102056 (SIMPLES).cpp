@@ -92,43 +92,22 @@ typedef enum opt
 //Protótipos
 void mostra (int *estrutura, int flag); //1 - ok
 void insere (int *estrutura, int dado, int *flag, Opt x); //4 - ok
-void retira (int *estrutura, int dado, int *flag, Opt x);
+void retira (int *estrutura, int dado, int *flag, Opt x); //5 - ok
 void ordena (int *estrutura, int flag); //3 - ok
 void limpa (int *estrutura, int *flag); //2 - ok
+int menu (); //6 - ok
 
 
 int main ()
 {
-	cout<<"QUESTAO 1)\tAL2 - 2022/1"<<endl;
-	cout<<endl<<endl<<"Para o presente trabalho, usei NULL \"0\" para ser uma referencia de estrutura \"limpa\""<<endl<<endl;
-	getch();
-	
+	cout<<"APS-1)\tPROGRAMACAO ESTRUTURADA - 2022/1"<<endl;
+	cout<<endl<<endl<<"Para o presente trabalho, usei \"0\" para ser uma referencia de estrutura \"limpa\""<<endl<<endl;
+	system("pause");
 	limpa (pilha, &flagPilha);
-	insere (pilha, 1, &flagPilha, PRIM);
-	insere (pilha, 2, &flagPilha, PRIM);
-	insere (pilha, 3, &flagPilha, PRIM);
-	mostra (pilha, flagPilha);
-/*
-	cout<<endl;
-	insere (pilha, 4, &flagPilha, ULT);
-	
-	mostra (pilha, flagPilha);
+	limpa (fila, &flagFila);
+	limpa (lista, &flagLista);
 
-	cout<<endl;
-	insere (pilha, 0, &flagPilha, ORD);
-	insere (pilha, 5, &flagPilha, ULT);
-	mostra (pilha, flagPilha);
-	cout<<endl;
-	retira (pilha, 0, &flagPilha, PRIM);
-	retira (pilha, 0, &flagPilha, ULT);
-*/
-	retira (pilha, 2, &flagPilha, ORD);
-	retira (pilha, 20, &flagPilha, ORD);
-
-	//retira (pilha, 200, &flagPilha, ORD);
-	mostra (pilha, flagPilha);
-
-	cout<<flagPilha;
+	menu();
 
 	system("pause");
 
@@ -193,7 +172,7 @@ void limpa (int *estrutura, int *flag)
 
     for (int i=0; i < MAX; i++)
     {
-    	estrutura[i]=NULL;//dá no mesmo que zero =s
+    	estrutura[i]=0;//dá no mesmo que zero =s
     }
 
 }
@@ -255,47 +234,46 @@ void retira (int *estrutura, int dado, int *flag, Opt x)
 	}
 	else
 	{
-			switch (x)
-			{	//podia ter colocado outra funcao e diminuir o cod aqui
-				case PRIM:
+		switch (x)
+		{	//podia ter colocado outra funcao e diminuir o cod aqui
+			case PRIM:
 
-					for(int i = 0; i <= *flag; i++)
+				for(int i = 0; i <= *flag; i++)
+				{
+					estrutura[i] = estrutura[i+1];
+				}
+
+				estrutura[*flag] = 0;
+				break;
+						
+			//uma questão aqui... estou sempre indo de trás para frente... dependendo da estrutura, posso acabar tirando o valor digitado mais recente (caso tenha outro dado igual)
+			case ORD:
+
+				for(int i = *flag; i >= 0; i--)
+				{
+					if(estrutura[i]==dado)
 					{
-						estrutura[i] = estrutura[i+1];
-					}
+						j++;
 
-					estrutura[*flag] = NULL;
-					break;
-							
-				//uma questão aqui... estou sempre indo de trás para frente... dependendo da estrutura, posso acabar tirando o valor digitado mais recente (caso tenha outro dado igual)
-				case ORD:
-
-					for(int i = *flag; i >= 0; i--)
-					{
-						if(estrutura[i]==dado)
+						for(aux = i; aux <= *flag; aux++)
 						{
-							j++;
-
-							for(aux = i; aux <= *flag; aux++)
-							{
-								estrutura[aux] = estrutura[aux+1];
-							}
-
-							break;
+							estrutura[aux] = estrutura[aux+1];
 						}
+
+						break;
 					}
+				}
 
-					estrutura[*flag] = NULL;
-					break;
+				estrutura[*flag] = 0;
+				break;
 
-				case ULT:
-					estrutura[*flag] = NULL;
-					break;
-				
-				default:
-					break;
-			}
-		
+			case ULT:
+				estrutura[*flag] = 0;
+				break;
+			
+			default:
+				break;
+		}
 
 		if(j==0)
 		{
@@ -311,10 +289,10 @@ void retira (int *estrutura, int dado, int *flag, Opt x)
 
 int menu()
 {
-	int option = 0, tipo = 0;	
+	int option = 0, tipo = 0, num = 0;	
 
 	system("cls");
-	
+
 	do
 	{
 		printf("\t\t\t##MENU##\n\t1- Lista\n\t2- Fila\n\t3- Pilha\n\t4- Sair\n\nEscolha uma opcao: ");
@@ -398,6 +376,7 @@ int menu()
 
 				case 3:
 					if(tipo == 1)
+					{
 						cout<<"\n\t\tSua lista:\n";
 						mostra(lista, flagLista);
 					}
@@ -415,6 +394,7 @@ int menu()
 
 				case 4:
 					if(tipo == 1)
+					{
 						limpa (lista, &flagLista);
 						cout<<"\n\t\tSua lista foi limpa!\n";
 					}
