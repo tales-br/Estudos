@@ -14,7 +14,7 @@
 - [`x`] - Fundamentos
 - [`x`] - Estruturas de controle
 - [`x`] - Funções
-- [` `] - Lista de Exercícios 1 (função) completada (55,00%)
+- [` `] - Lista de Exercícios 1 (função) completada - {55%}
 - [` `] - OO
 
 
