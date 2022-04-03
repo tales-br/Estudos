@@ -136,7 +136,9 @@ void insere (int *estrutura, int dado, int *flag, Opt x)
 				case PRIM:
 					for(int i = *flag; i >= 0; i--)
 					{
+
 						estrutura[i] = estrutura[i-1];
+
 					}
 					estrutura[0] = dado;
 					break;
@@ -238,51 +240,63 @@ void retira (int *estrutura, int dado, int *flag, Opt x)
 		{	//podia ter colocado outra funcao e diminuir o cod aqui
 			case PRIM:
 
-				for(int i = 0; i <= *flag; i++)
+				for(int i = 0; i <= *flag-1; i++)
 				{
-					estrutura[i] = estrutura[i+1];
+					if(i == *flag -1)
+					{
+						estrutura[i] = 0;
+					}
+					else
+					{
+						estrutura[i] = estrutura[i+1];
+					}
 				}
 
-				estrutura[*flag] = 0;
+				//estrutura[*flag] = 0;
+				*flag = *flag-1;
 				break;
 						
 			//uma questão aqui... estou sempre indo de trás para frente... dependendo da estrutura, posso acabar tirando o valor digitado mais recente (caso tenha outro dado igual)
 			case ORD:
 
-				for(int i = *flag; i >= 0; i--)
+				for(int i = *flag-1; i >= 0; i--)
 				{
+					cout<<"Valor de i: "<<i<<endl; //*****************************flag-1*********************
 					if(estrutura[i]==dado)
 					{
 						j++;
 
-						for(aux = i; aux <= *flag; aux++)
+						for(aux = i; aux <= *flag-1; aux++)
 						{
 							estrutura[aux] = estrutura[aux+1];
 						}
-
+						
+						if(j==0)
+						{
+							cout<<"\t\tValor nao encontrado!\n";
+						}
+						else
+						{
+							*flag = *flag - 1;
+							cout<<"\t\tValor flag:"<<*flag<<endl;//******************************************************
+						}
+						
 						break;
 					}
 				}
-
 				estrutura[*flag] = 0;
 				break;
 
 			case ULT:
 				estrutura[*flag] = 0;
+				*flag = *flag - 1;
 				break;
 			
 			default:
 				break;
 		}
 
-		if(j==0)
-		{
-			cout<<"\t\tValor nao encontrado!\n";
-		}
-		else
-		{
-			*flag = *flag - 1;
-		}
+
 	}
 }
 
@@ -300,12 +314,16 @@ int menu()
 		cin>>tipo;
 		
 		do{
-			if(tipo>4 || tipo<1)
+
+			if(tipo>4 || tipo<1 || tipo ==4)
 			{
-			cout<<"\t\t\tOpcao invalida!\n";
-			system("pause");
-			system("cls");		
-			break;
+				if(tipo!=4)
+				{
+					cout<<"\t\t\tOpcao invalida!\n";
+					system("pause");
+				}
+				system("cls");		
+				break;
 			}
 
 			system("cls");	
@@ -317,7 +335,7 @@ int menu()
 			{
 				case 1:
 
-					cout<<"\t\tInforme o valor para insercao:";
+					cout<<"\t\tInforme o valor para insercao: ";
 
 					cin>>num;
 					cout<<endl;
@@ -371,7 +389,6 @@ int menu()
 						mostra(pilha, flagPilha);
 					}
 					
-					cout<<"\n\tValor inserido!\n";
 				break;
 
 				case 3:
@@ -383,7 +400,7 @@ int menu()
 					if(tipo == 2)
 					{
 						cout<<"\n\t\tSua fila:\n";
-						mostra(lista, flagFila);
+						mostra(fila, flagFila);
 					}
 					if(tipo == 3)
 					{
@@ -427,7 +444,7 @@ int menu()
 
 		}while(option!=5);
 	}
-	while(option!=4);
+	while(tipo!=4);
 
 return 0;
 }
