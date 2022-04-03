@@ -261,7 +261,7 @@ void retira (int *estrutura, int dado, int *flag, Opt x)
 
 				for(int i = *flag-1; i >= 0; i--)
 				{
-					cout<<"Valor de i: "<<i<<endl; //*****************************flag-1*********************
+
 					if(estrutura[i]==dado)
 					{
 						j++;
@@ -278,7 +278,7 @@ void retira (int *estrutura, int dado, int *flag, Opt x)
 						else
 						{
 							*flag = *flag - 1;
-							cout<<"\t\tValor flag:"<<*flag<<endl;//******************************************************
+
 						}
 						
 						break;
