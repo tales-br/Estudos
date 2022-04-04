@@ -62,7 +62,7 @@ IMPLEMENTA��O - VETOR DE 10 POSI��ES DE INTEIRO.
 
 /*
 Date: 01/04/2022
-Author: Tales Barbosa Rodrigues
+Author: Tales Barbosa Rodrigues - 2017102056
 Github: github.com/tales-br/Estudos/C
 */
 
