@@ -11,7 +11,6 @@
 //Não sei se era um requisito obrigatório usar array 'E' ArrayList no programa
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Jogo 
 {
@@ -79,7 +78,6 @@ public class Jogo
             }
             else
             {
-                String aux;
                 System.out.printf("\nVocê acertou %d dezena(s): ",hits);
                 
                 for(int i = 0; i <hits; i++)
@@ -101,22 +99,31 @@ public class Jogo
         }
         else
         {
-            System.out.printf("\nNão é possível mostrar resultados para uma aposta inválida!");
+            System.out.printf("\nNão é possível mostrar resultado!");
         }
     }
     
     public void imprimeJogoAposta ()
     {
-        int indexValor = jogoAposta.size() - 6;
-        
-        System.out.printf("\n\tAposta: %d dezenas", jogoAposta.size());
-        System.out.printf("\n\tDezenas: ");
-        
-        for(int i =0; i<jogoAposta.size();i++)
+        if(processar)
         {
-            System.out.printf("%s ",jogoAposta.get(i)<10 ? "0"+Integer.toString(jogoAposta.get(i)):Integer.toString(jogoAposta.get(i)));
+            int indexValor = jogoAposta.size() - 6;
+
+            System.out.printf("\n\tAposta: %d dezenas", jogoAposta.size());
+            System.out.printf("\n\tDezenas: ");
+
+            for(int i =0; i<jogoAposta.size();i++)
+            {
+                System.out.printf("%s ",jogoAposta.get(i)<10 ? "0"+Integer.toString(jogoAposta.get(i)):Integer.toString(jogoAposta.get(i)));
+            }
+            
+            System.out.printf("\n\tValor: R$ %.2f", tabValores[indexValor]);
         }
-        System.out.printf("\n\tValor: R$ %.2f", tabValores[indexValor]);
+        else
+        {
+            System.out.printf("\nNão é possível mostrar aposta!");
+        }
+        
         
     }
     
