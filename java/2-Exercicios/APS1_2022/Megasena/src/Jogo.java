@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 /**
  *
  * @author Tales
@@ -63,7 +58,7 @@ public class Jogo
 
             System.out.printf("\t\t\n-------------------------------------------------\nR E S U L T A D O D A M E G A S E N A\n-------------------------------------------------\n\n");
             System.out.printf("Dezenas sorteadas: ");
-
+            //mostra as dezenas sorteadas (coloca um espaço entre elas)
             for (int i = 0; i<6; i++)
             {
                 System.out.printf("%s%s",jogoSorteio.get(i)<10 ? "0"+Integer.toString(jogoSorteio.get(i)):Integer.toString(jogoSorteio.get(i)), i != jogoSorteio.size()-1 ? " ": "");
@@ -82,7 +77,7 @@ public class Jogo
                 
                 for(int i = 0; i <hits; i++)
                 {
-                    
+                    //mostra as dezenas acertadas (coloca uma ',' ou um 'e' entre elas)
                     if(i == hits-1)
                     {
                         
@@ -107,6 +102,7 @@ public class Jogo
     {
         if(processar)
         {
+            //a quantidade de apostas -6 indica em qual posicao do vetor está o valor total a pagar pela aposta
             int indexValor = jogoAposta.size() - 6;
 
             System.out.printf("\n\tAposta: %d dezenas", jogoAposta.size());
