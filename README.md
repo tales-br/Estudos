@@ -1,38 +1,49 @@
-# Estudo de C/C++/C# (2022)
+# Programação
 
-- [` `] - Resolução dos trabalhos acadêmicos 2022 (C ou C++) - {50%}
-- [` `] - Início dos estudos de C#
+## Bootcamps
 
-# Estudo de JAVA (2022)
+- GFT Start #5 .NET - {em curso}
+
+## Estudo de C/C++/C# (2022)
+
+- [` `] - Resolução dos trabalhos acadêmicos 2022 (C ou C++) - {50%} 
+- [`x`] - Início dos estudos de C#
+- [` `] - Bootcamp .Net completo
+
+## Estudo de JAVA (2022)
 
 - [`x`] - Adicionado Branch
-- [` `] - Organização de exercícios em aula
-- [` `] - Trabalhos e provas
+- [`x`] - Organização de exercícios em aula
+- [` `] - Trabalhos e provas - {50%}
 
-# Estudo de JS (2022)
+## Estudo de JS (2022)
 
 - [`x`] - Fundamentos
 - [`x`] - Estruturas de controle
 - [`x`] - Funções
 - [` `] - Lista de Exercícios 1 (função) completada - {55%}
-- [` `] - OO
+- [`x`] - OO
 
+* * * 
 
 # Aprender Git
 
-* Fontes
-- ProGit: https://git-scm.com/book/pt-br/v2
-- Youtube: https://www.youtube.com/watch?v=2alg7MQ6_sI
+## Fontes
+- [ProGit](https://git-scm.com/book/pt-br/v2)
+- [Youtube](https://www.youtube.com/watch?v=2alg7MQ6_sI)
+- [Dio](https://web.dio.me/course/introducao-ao-git-e-ao-github/learning/75b9fe49-6ed4-4480-83a7-7e37fc356aa9)
 
 - [`x`] - Baixar ebook
 - [`x`] - Listagem de comandos básicos mais usados
+- [`x`] - Curso DIO Completo - Introdução ao Git e ao Github
 - [`x`] - Criar repositório / Hello World
 - [`x`] - Add / Commit 
 - [`x`] - Criar branch
-- [` `] - Merge
+- [`x`] - Merge
 - [`x`] - Linhas do tempo limpas
 
-    =>Git Commands - Road so far..
+   ### =>Git Commands - Road so far..
+
 * `git init` //Inicia a linha do tempo
 * `git add` //Adiciona ou atualiza mudanças para irem para a linha do tempo
 * `git commit` //Adiciona um ponto na linha do tempo
