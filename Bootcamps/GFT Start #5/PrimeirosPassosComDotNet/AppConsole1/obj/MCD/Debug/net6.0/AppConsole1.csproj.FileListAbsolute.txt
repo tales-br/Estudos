@@ -1,0 +1,15 @@
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\bin\MCD\Debug\net6.0\AppConsole1.exe
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\bin\MCD\Debug\net6.0\AppConsole1.deps.json
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\bin\MCD\Debug\net6.0\AppConsole1.runtimeconfig.json
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\bin\MCD\Debug\net6.0\AppConsole1.dll
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\bin\MCD\Debug\net6.0\AppConsole1.pdb
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\obj\MCD\Debug\net6.0\AppConsole1.csproj.AssemblyReference.cache
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\obj\MCD\Debug\net6.0\AppConsole1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\obj\MCD\Debug\net6.0\AppConsole1.AssemblyInfoInputs.cache
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\obj\MCD\Debug\net6.0\AppConsole1.AssemblyInfo.cs
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\obj\MCD\Debug\net6.0\AppConsole1.csproj.CoreCompileInputs.cache
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\obj\MCD\Debug\net6.0\AppConsole1.dll
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\obj\MCD\Debug\net6.0\refint\AppConsole1.dll
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\obj\MCD\Debug\net6.0\AppConsole1.pdb
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\obj\MCD\Debug\net6.0\AppConsole1.genruntimeconfig.cache
+C:\Users\Tales\Documents\4-Estudo\Bootcamps\GFT Start #5\PrimeirosPassosComDotNet\AppConsole1\obj\MCD\Debug\net6.0\ref\AppConsole1.dll
