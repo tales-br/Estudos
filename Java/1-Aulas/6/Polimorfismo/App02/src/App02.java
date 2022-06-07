@@ -8,6 +8,14 @@ public class App02 {
         System.out.println ("Área: " + fig.area());
     }
     
+    
+    
+
+
+
+    
+    
+    
     public static void main(String[] args) 
     {
         Circulo circ = new Circulo (1,1,2);
@@ -20,6 +28,9 @@ public class App02 {
         
         for (Forma2D fig: figuras)
         mostraForma (fig);
+        
+
+        
     }
     
 }
