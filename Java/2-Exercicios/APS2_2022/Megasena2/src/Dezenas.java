@@ -50,4 +50,9 @@ public class Dezenas
     {
         return this.numeros.get(posicao);
     }
+    
+    public ArrayList dezenas (int num)
+    {
+        return this.numeros;
+    }
 }

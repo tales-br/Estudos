@@ -9,20 +9,17 @@ import java.util.ArrayList;
 
 public class Jogo 
 {
-    private ArrayList <Integer> jogoAposta;
-    private ArrayList <Integer> jogoSorteio;
-    final private double [] tabValores = {4.5, 31.5, 126.0, 378.0, 945.0, 2079.0, 4158.0, 7722.0, 13513.5, 22522.5};
+    private final ArrayList <Integer> jogoAposta;
+    private final ArrayList <Integer> jogoSorteio;
+    private final double [] tabValores = {4.5, 31.5, 126.0, 378.0, 945.0, 2079.0, 4158.0, 7722.0, 13513.5, 22522.5};
     int [] tabAcertos = new int [6];
-    private boolean processar = false;
     private int hits = 0;
     
-    
     //construtor    
-    public Jogo(ArrayList <Integer> aposta, ArrayList <Integer> sorteio, boolean apostaEhValida)
+    public Jogo(ArrayList <Integer> aposta, ArrayList <Integer> sorteio)
     {
         this.jogoAposta = aposta;
         this.jogoSorteio = sorteio;
-        this.processar = apostaEhValida;
     }
     
     public int acertos ()
@@ -30,8 +27,6 @@ public class Jogo
         this.hits = 0;
         int j = 0;
         
-        if(processar)
-        {
             for(int i = 0; i < jogoAposta.size(); i++)
             {
                 if(jogoSorteio.contains(jogoAposta.get(i)))
@@ -41,11 +36,6 @@ public class Jogo
                     this.hits++;
                 }
             }
-        }
-        else
-        {
-            this.hits = 0;
-        }
         
         return this.hits;
     }
@@ -53,8 +43,6 @@ public class Jogo
     public void imprimeResultado ()
     {    
         acertos();
-        if(processar)
-        {
 
             System.out.printf("\t\t\n-------------------------------------------------\nR E S U L T A D O D A M E G A S E N A\n-------------------------------------------------\n\n");
             System.out.printf("Dezenas sorteadas: ");
@@ -91,17 +79,10 @@ public class Jogo
                 System.out.printf("\n\n-------------------------------------------------");
             }
             
-        }
-        else
-        {
-            System.out.printf("\nNão é possível mostrar resultado!");
-        }
     }
     
     public void imprimeJogoAposta ()
     {
-        if(processar)
-        {
             //a quantidade de apostas -6 indica em qual posicao do vetor está o valor total a pagar pela aposta
             int indexValor = jogoAposta.size() - 6;
 
@@ -114,11 +95,7 @@ public class Jogo
             }
             
             System.out.printf("\n\tValor: R$ %.2f", tabValores[indexValor]);
-        }
-        else
-        {
-            System.out.printf("\nNão é possível mostrar aposta!");
-        }
+
         
         
     }

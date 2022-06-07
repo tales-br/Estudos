@@ -8,15 +8,35 @@
  *  Nome completo 5:    Willian Antonio de Assunção -    2018101605
  */
 
+import java.util.Scanner;
+
 public class Megasena2 
 {
     
     
     public static void main(String[] args)
     {
-        Aposta aposta = new Aposta();
+        String numCpf;
         
+        Scanner entrada = new Scanner(System.in);
+        
+        Aposta aposta = new Aposta();
         aposta.setAposta();
+        Sorteio sorteio = new Sorteio();
+        
+        System.out.println("Entre com o seu CPF: ");
+        numCpf = entrada.nextLine();
+        
+        if(aposta.consultaCpf(numCpf))
+        {
+            System.out.println("Você apostou "+aposta.);
+        }
+        else
+        {
+            
+        }
+        
+        //Jogo jogo = new Jogo();
         
         
         
