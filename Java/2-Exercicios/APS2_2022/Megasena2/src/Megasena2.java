@@ -21,20 +21,15 @@ public class Megasena2
         Scanner entrada = new Scanner(System.in);
         
         Aposta aposta = new Aposta();
-        aposta.setAposta();
-        Sorteio sorteio = new Sorteio();
         
-        System.out.println("Entre com o seu CPF: ");
+        aposta.setAposta();
+        
+        
+        System.out.print("Entre com o seu CPF: ");
         numCpf = entrada.nextLine();
         
-        if(aposta.consultaCpf(numCpf))
-        {
-            System.out.println("Você apostou "+aposta.);
-        }
-        else
-        {
-            
-        }
+        aposta.consultaCpf(numCpf);
+        
         
         //Jogo jogo = new Jogo();
         

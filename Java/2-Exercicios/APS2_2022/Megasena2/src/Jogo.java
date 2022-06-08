@@ -3,8 +3,6 @@
  * @author Tales
  */
 
-//Não sei se era um requisito obrigatório usar array 'E' ArrayList no programa
-
 import java.util.ArrayList;
 
 public class Jogo 
@@ -49,6 +47,7 @@ public class Jogo
             //mostra as dezenas sorteadas (coloca um espaço entre elas)
             for (int i = 0; i<6; i++)
             {
+                //System.out.print(" "+jogoSorteio.get(i));
                 System.out.printf("%s%s",jogoSorteio.get(i)<10 ? "0"+Integer.toString(jogoSorteio.get(i)):Integer.toString(jogoSorteio.get(i)), i != jogoSorteio.size()-1 ? " ": "");
             }
 
@@ -83,21 +82,19 @@ public class Jogo
     
     public void imprimeJogoAposta ()
     {
-            //a quantidade de apostas -6 indica em qual posicao do vetor está o valor total a pagar pela aposta
-            int indexValor = jogoAposta.size() - 6;
+        //trabalhei com inteiros.. então tive que colocar 0's a esquerda em números menores que 10 como mostrava o print dos requisitos 
 
-            System.out.printf("\n\tAposta: %d dezenas", jogoAposta.size());
-            System.out.printf("\n\tDezenas: ");
+        //a quantidade de apostas -6 indica em qual posicao do vetor está o valor total a pagar pela aposta
+        int indexValor = jogoAposta.size() - 6;
 
-            for(int i =0; i<jogoAposta.size();i++)
-            {
-                System.out.printf("%s ",jogoAposta.get(i)<10 ? "0"+Integer.toString(jogoAposta.get(i)):Integer.toString(jogoAposta.get(i)));
-            }
-            
-            System.out.printf("\n\tValor: R$ %.2f", tabValores[indexValor]);
+        System.out.printf("Você apostou %s dezenas: ",jogoAposta.size()<10 ? "0"+jogoAposta.size(): jogoAposta.size());
 
-        
-        
+        for(int i =0; i<jogoAposta.size();i++)
+        {
+            System.out.printf("%s ",jogoAposta.get(i)<10 ? "0"+Integer.toString(jogoAposta.get(i)):Integer.toString(jogoAposta.get(i)));
+        }
+
+        System.out.printf("\nValor: R$ %.2f", tabValores[indexValor]);
     }
     
 }

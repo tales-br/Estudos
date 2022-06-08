@@ -9,8 +9,8 @@ import java.util.Collections;
 
 public class Sorteio 
 {
-    private Random num = new Random();
-    private ArrayList <Integer> numSorteados = new ArrayList ();
+    private final Random num = new Random();
+    private final ArrayList <Integer> numSorteados = new ArrayList ();
     
     //Sorteia os números. Caso o número seja igual a algum valor no array, ele sorteará novamente
     public void setSorteio ()
@@ -32,16 +32,14 @@ public class Sorteio
         Collections.sort(this.numSorteados);
     }
     
-    public ArrayList <Integer> getSorteio ()
+    public ArrayList getSorteio ()
     {
         return this.numSorteados;
     }
     
     private void limpaSorteio ()
     {
-
             this.numSorteados.clear();
-
     }
     
     public void newSorteio ()
@@ -50,14 +48,6 @@ public class Sorteio
         setSorteio();
     }
     
-    public void imprimeSorteio ()
-    {
-         System.out.printf("\nNumeros sorteados:\n");
-            for(int i = 0; i < numSorteados.size(); i++)
-            {
-                System.out.printf("%d%s",numSorteados.get(i), i != numSorteados.size()-1 ? " ": "");
-            }
-    }
     
 }
 

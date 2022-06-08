@@ -9,10 +9,11 @@ public class Aposta
     private final int minAposta = 6;
     private final int numMax = 60;
     private final int numMin = 1;
-    
+    Sorteio sorteio = new Sorteio(); //Cria um objeto do tipo sorteio
     
     public void setAposta ()
     {
+        sorteio.setSorteio();
         try
         {
             FileInputStream arqApostas = new FileInputStream("apostas.txt");
@@ -32,7 +33,6 @@ public class Aposta
         }
         
         validaDezenas();
-        
         
     }
     
@@ -91,14 +91,40 @@ public class Aposta
         listaAposta.put(parcial[0],new Dezenas(parcial[1]));
     }
     
-    public boolean consultaCpf (String cpf)
+    public void consultaCpf (String cpf)
     {
-        return listaAposta.containsKey(cpf);
+        if(listaAposta.containsKey(cpf))
+        {
+            //System.out.println("Você apostou "+totalDzApostadas(cpf)+" dezenas:"+imprimeNumAposta (cpf));
+            Jogo jogo = new Jogo(listaAposta.get(cpf).dezenas(),sorteio.getSorteio());
+            jogo.imprimeJogoAposta();
+            jogo.imprimeResultado();
+        }
+        else
+        {
+            System.out.println("Você não fez aposta neste concurso.");
+        }
+            
     }
     
-    public int totalDzApostadas (String cpf)
+    public ArrayList listaDezenas (String cpf)
+    {
+        return listaAposta.get(cpf).dezenas();
+    }
+    
+    private int totalDzApostadas (String cpf)
     {
         return listaAposta.get(cpf).qtdDezenas();
+    }
+    
+    private String imprimeNumAposta (String cpf)
+    {
+        String numAposta=" ";
+        for(int i= 0; i<listaAposta.get(cpf).qtdDezenas();i++)
+        {
+            numAposta = numAposta+listaAposta.get(cpf).retornaNumero(i)+" ";
+        }
+        return numAposta;
     }
     
 }

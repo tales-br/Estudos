@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Dezenas
 {
-    private ArrayList <Integer> numeros = new ArrayList<Integer>();
+    private ArrayList <Integer> numeros = new ArrayList<>();
     private String mensagemAlerta= "Dezena(s) apostada(s) inválida(s)!";
     
     public Dezenas(String aposta)
@@ -19,19 +19,16 @@ public class Dezenas
                 
                 try
                 { 
-                    //tempInt = Integer.parseInt(tempString);
-
                     this.numeros.add(Integer.parseInt(tempString));
                 }
                 catch (InputMismatchException inputMismatchException)
                 {
-                    System.out.println(mensagemAlerta+" 1");
+                    System.out.println(mensagemAlerta);
                     System.exit(-1);
                 }
                 catch(NumberFormatException numberFormatException)
                 {
-                    numberFormatException.printStackTrace();
-                    System.out.println(mensagemAlerta+" 2");
+                    System.out.println(mensagemAlerta);
                     System.exit(-1);
                 }
 
@@ -51,7 +48,7 @@ public class Dezenas
         return this.numeros.get(posicao);
     }
     
-    public ArrayList dezenas (int num)
+    public ArrayList dezenas ()
     {
         return this.numeros;
     }
