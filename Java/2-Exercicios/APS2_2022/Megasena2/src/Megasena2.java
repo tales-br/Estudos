@@ -24,17 +24,10 @@ public class Megasena2
         
         aposta.setAposta();
         
-        
         System.out.print("Entre com o seu CPF: ");
         numCpf = entrada.nextLine();
         
         aposta.consultaCpf(numCpf);
-        
-        
-        //Jogo jogo = new Jogo();
-        
-        
-        
         
     }
 }

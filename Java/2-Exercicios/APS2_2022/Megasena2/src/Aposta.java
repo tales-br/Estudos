@@ -59,14 +59,20 @@ public class Aposta
               //Verifica o valor de cada dezena da aposta corrente
               for(int i = 0; i<entry.getValue().qtdDezenas();i++)
               {
-                  if(entry.getValue().retornaNumero(i)>numMax || entry.getValue().retornaNumero(i)<numMin)
-                  {
-                      if(contApostaNumDezInvalida==0) System.out.println("Dezena(s) fora do parâmetro para CPF: "+entry.getKey());
-                      
-                      System.out.print(" "+ entry.getValue().retornaNumero(i));
-                      
-                      contApostaNumDezInvalida++;
-                  }
+                if(entry.getValue().retornaNumero(i)>numMax || entry.getValue().retornaNumero(i)<numMin)
+                {
+                  if(contApostaNumDezInvalida==0) System.out.println("Dezena(s) fora do parâmetro para CPF: "+entry.getKey());
+
+                  System.out.print("["+ entry.getValue().retornaNumero(i)+"]");
+
+                  contApostaNumDezInvalida++;
+                }
+              }
+              
+              if(contApostaNumDezInvalida!=0)
+              {
+                System.out.println("\nTotal de registros fora do parâmtro: "+contApostaNumDezInvalida);
+                System.exit(-1);
               }
           }
     }
