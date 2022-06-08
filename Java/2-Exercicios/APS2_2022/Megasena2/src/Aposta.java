@@ -112,19 +112,4 @@ public class Aposta
         return listaAposta.get(cpf).dezenas();
     }
     
-    private int totalDzApostadas (String cpf)
-    {
-        return listaAposta.get(cpf).qtdDezenas();
-    }
-    
-    private String imprimeNumAposta (String cpf)
-    {
-        String numAposta=" ";
-        for(int i= 0; i<listaAposta.get(cpf).qtdDezenas();i++)
-        {
-            numAposta = numAposta+listaAposta.get(cpf).retornaNumero(i)+" ";
-        }
-        return numAposta;
-    }
-    
 }
