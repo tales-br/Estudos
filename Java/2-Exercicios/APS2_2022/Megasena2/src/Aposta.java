@@ -9,7 +9,7 @@ public class Aposta
     private final int minAposta = 6;
     private final int numMax = 60;
     private final int numMin = 1;
-    Sorteio sorteio = new Sorteio(); //Cria um objeto do tipo sorteio
+    Sorteio sorteio = new Sorteio(); //Cria um objeto do tipo sorteio para instanciar no construtor
     
     public void setAposta ()
     {
@@ -48,20 +48,17 @@ public class Aposta
               if(entry.getValue().qtdDezenas()>maxAposta || entry.getValue().qtdDezenas()<minAposta)
               {
                 contApostaDezInvalida++;
-                System.out.println("Quantidade de dezenas fora do parâmetro para CPF: "+entry.getKey() + " possui "+ entry.getValue().qtdDezenas()+" dezenas");
+                System.out.println("\nQuantidade de dezenas fora do parâmetro para CPF: "+entry.getKey() + " possui "+ entry.getValue().qtdDezenas()+" dezenas");
               }
-              if(contApostaDezInvalida>0)
-              {
-                System.out.println(contApostaDezInvalida+" registro(s) com quantidade de dezenas fora do parâmetro.\nO sistema irá abortar.");
-                System.exit(-1);
-              }
+
               
               //Verifica o valor de cada dezena da aposta corrente
               for(int i = 0; i<entry.getValue().qtdDezenas();i++)
               {
-                if(entry.getValue().retornaNumero(i)>numMax || entry.getValue().retornaNumero(i)<numMin)
+                  //1- verifica se já tem aquele número 2-verifica se está dentro da range dos números mins e máx
+                if(entry.getValue().dezenaRepetida(entry.getValue().retornaNumero(i)) || entry.getValue().retornaNumero(i)>numMax || entry.getValue().retornaNumero(i)<numMin)
                 {
-                  if(contApostaNumDezInvalida==0) System.out.println("Dezena(s) fora do parâmetro para CPF: "+entry.getKey());
+                  if(contApostaNumDezInvalida==0) System.out.println("\nDezena(s) fora do parâmetro ou repetida para CPF: "+entry.getKey());
 
                   System.out.print("["+ entry.getValue().retornaNumero(i)+"]");
 
@@ -69,12 +66,24 @@ public class Aposta
                 }
               }
               
-              if(contApostaNumDezInvalida!=0)
-              {
-                System.out.println("\nTotal de registros fora do parâmtro: "+contApostaNumDezInvalida);
-                System.exit(-1);
-              }
+
           }
+        
+        if(contApostaDezInvalida>0 || contApostaNumDezInvalida>0)
+        {
+            if(contApostaDezInvalida>0)
+            {
+                System.out.println("\n\t"+contApostaDezInvalida+" registro(s) com quantidade de dezenas fora do parâmetro.");
+            }
+            
+            if(contApostaNumDezInvalida!=0)
+            {
+                System.out.println("\n\tTotal de registros fora do parâmtro: "+contApostaNumDezInvalida);
+            }            
+            
+            System.out.println("\n\tO sistema irá abortar.");
+            System.exit(-1);            
+        }
     }
     
     //Verifica se o CPF já está constando nas chaves registradas. Sai do programa em caso positivo.
@@ -101,7 +110,6 @@ public class Aposta
     {
         if(listaAposta.containsKey(cpf))
         {
-            //System.out.println("Você apostou "+totalDzApostadas(cpf)+" dezenas:"+imprimeNumAposta (cpf));
             Jogo jogo = new Jogo(listaAposta.get(cpf).dezenas(),sorteio.getSorteio());
             jogo.imprimeJogoAposta();
             jogo.imprimeResultado();

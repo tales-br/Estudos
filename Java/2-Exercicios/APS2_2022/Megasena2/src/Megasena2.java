@@ -4,8 +4,9 @@
  *  Nome completo 1:    Anna Carla Souza    -   2018101222
  *  Nome completo 2:    Luiz Sergio Venancio da Costa Netto -   2019100245
  *  Nome completo 3:    Tales Barbosa Rodrigues -   2017102056
- *  Nome completo 4:    Wellington alves da silva   -   2020101708
- *  Nome completo 5:    Willian Antonio de Assunção -    2018101605
+ *  Nome completo 4:    Victor Oliveira Marins dos Anjos -   2017103405
+ *  Nome completo 5:    Wellington alves da silva   -   2020101708
+ *  Nome completo 6:    Willian Antonio de Assunção -    2018101605
  */
 
 import java.util.Scanner;

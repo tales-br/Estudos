@@ -18,15 +18,10 @@ public class Dezenas
             {
                 
                 try
-                { 
+                {
                     this.numeros.add(Integer.parseInt(tempString));
                 }
-                catch (InputMismatchException inputMismatchException)
-                {
-                    System.out.println(mensagemAlerta);
-                    System.exit(-1);
-                }
-                catch(NumberFormatException numberFormatException)
+                catch (InputMismatchException | NumberFormatException e1)
                 {
                     System.out.println(mensagemAlerta);
                     System.exit(-1);
@@ -52,4 +47,25 @@ public class Dezenas
     {
         return this.numeros;
     }
+    
+    public boolean  dezenaRepetida (int num)
+    {
+        int repete = 0;
+        
+        for(int i = 0; i<qtdDezenas();i++)
+        {
+            if(this.numeros.get(i) == num)
+            {
+                repete++;
+            }
+            
+            if(repete>1)
+            {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
 }
