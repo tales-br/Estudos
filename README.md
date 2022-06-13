@@ -3,10 +3,11 @@
 ## Bootcamps
 
 - GFT Start #5 .NET - {em curso}
+- Santander Bootcamp Mobile Developer - {em curso}
 
 ## Estudo de C/C++/C# (2022)
 
-- [` `] - Resolução dos trabalhos acadêmicos 2022 (C ou C++) - {50%} 
+- [`x`] - Resolução dos trabalhos acadêmicos 2022 (C ou C++) - {100%} 
 - [`x`] - Início dos estudos de C#
 - [` `] - Bootcamp .Net completo
 
@@ -14,7 +15,7 @@
 
 - [`x`] - Adicionado Branch
 - [`x`] - Organização de exercícios em aula
-- [` `] - Trabalhos e provas - {50%}
+- [`x`] - Trabalhos e provas - {100%}
 
 ## Estudo de JS (2022)
 
