@@ -9,10 +9,7 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import br.tales.native_resources.R
 import br.tales.native_resources.databinding.ActivityContactsBinding
-import br.tales.native_resources.databinding.ContactViewBinding
 import data.Data_Contacts
 
 private lateinit var ContactsBinding: ActivityContactsBinding

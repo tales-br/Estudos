@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="16dp"
-        android:text="Intent - Inserir evento na agenda"
+        android:text="Inserir evento na agenda"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +23,7 @@
     <Button
         android:id="@+id/bt_irContatos"
         android:layout_width="match_parent"
-        android:layout_height="60dp
-"
+        android:layout_height="60dp"
         android:text="Contatos"
         android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,6 +31,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/bt_principal"
         app:layout_constraintTop_toBottomOf="@+id/bt_principal"
+        app:layout_constraintVertical_bias="0.0" />
+    <Button
+        android:id="@+id/bt_irImagem"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Imagem"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bt_irContatos"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bt_irContatos"
+        app:layout_constraintTop_toBottomOf="@+id/bt_irContatos"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

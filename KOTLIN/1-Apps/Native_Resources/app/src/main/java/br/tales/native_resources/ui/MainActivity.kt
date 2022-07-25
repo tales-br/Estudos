@@ -41,6 +41,11 @@ class MainActivity : AppCompatActivity()
         startActivity(intentAbrirContatos)
         }
 
+        MainBinding.btIrImagem.setOnClickListener{
+            val intentAbrirImagem = Intent(this, br.tales.native_resources.ui.Image::class.java)
+        startActivity(intentAbrirImagem)
+        }
+
     }
 
 }

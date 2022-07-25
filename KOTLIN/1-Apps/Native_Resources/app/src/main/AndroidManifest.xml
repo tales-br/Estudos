@@ -20,6 +20,10 @@
             android:parentActivityName=".ui.MainActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.Image"
+            android:parentActivityName=".ui.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
