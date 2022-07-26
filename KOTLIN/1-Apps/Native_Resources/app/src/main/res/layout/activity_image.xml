@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/iv_img_Activity"
-        android:layout_width="380dp"
-        android:layout_height="380dp"
-        android:layout_margin="16dp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_margin="8dp"
         android:contentDescription="Imagem selecionada pelo USER"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_img_search" />
@@ -20,8 +20,8 @@
         style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:padding="16dp"
+        android:layout_margin="8dp"
+        android:padding="8dp"
         android:text="Selecionar imagem" />
 
     <Button
@@ -29,9 +29,9 @@
         style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:padding="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="8dp"
         android:text="Tirar foto" />
 
 
