@@ -45,4 +45,17 @@
         app:layout_constraintTop_toBottomOf="@+id/bt_irContatos"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/bt_irMaps"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="MAPA"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bt_irImagem"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bt_irImagem"
+        app:layout_constraintTop_toBottomOf="@+id/bt_irImagem"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

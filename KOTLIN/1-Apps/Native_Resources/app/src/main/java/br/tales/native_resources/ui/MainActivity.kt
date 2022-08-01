@@ -46,6 +46,11 @@ class MainActivity : AppCompatActivity()
         startActivity(intentAbrirImagem)
         }
 
+        MainBinding.btIrMaps.setOnClickListener{
+            val intentAbrirMaps = Intent(this, br.tales.native_resources.ui.MapsActivity::class.java)
+            startActivity(intentAbrirMaps)
+        }
+
     }
 
 }

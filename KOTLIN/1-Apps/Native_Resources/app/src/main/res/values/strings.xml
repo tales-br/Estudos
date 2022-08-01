@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Native Resources</string>
+    <string name="title_activity_maps">MAP</string>
 </resources>
