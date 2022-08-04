@@ -14,7 +14,7 @@
 - [`x`] - Adicionado Branch
 - [`x`] - Organização de exercícios em aula
 - [`x`] - Trabalhos e provas - {100%}
-- [` `] - Apps do bootcamp do Santander (JAVA E KOTLIN)
+- [`x`] - Apps do bootcamp do Santander (JAVA E KOTLIN)
    - businessCard (App gerador de cartão de visitas)
    - bjj-news (App sobre notícias de Jiu Jitsu Brasileiro)
    - simulator (App simulador simples de resultado de partidas de futebol)
