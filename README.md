@@ -2,21 +2,24 @@
 
 ## Bootcamps
 
-- GFT Start #5 .NET - {em curso}
-- Santander Bootcamp Mobile Developer - {em curso}
+- [`x`] Santander Bootcamp Mobile Developer
 
 ## Estudo de C/C++/C# (2022)
 
 - [`x`] - Resolução dos trabalhos acadêmicos 2022 (C ou C++) - {100%} 
 - [`x`] - Início dos estudos de C#
-- [` `] - Bootcamp .Net completo
 
 ## Estudo de JAVA (2022)
 
 - [`x`] - Adicionado Branch
 - [`x`] - Organização de exercícios em aula
 - [`x`] - Trabalhos e provas - {100%}
-- [` `] - Apps do bootcamp do Santander (JAVA E KOTLIN)
+- [`x`] - Apps do bootcamp do Santander (JAVA E KOTLIN)
+   - businessCard (App gerador de cartão de visitas)
+   - bjj-news (App sobre notícias de Jiu Jitsu Brasileiro)
+   - simulator (App simulador simples de resultado de partidas de futebol)
+
+
 
 ## Estudo de JS (2022)
 
