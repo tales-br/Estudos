@@ -2,18 +2,23 @@
 
 const http = require('http')
 
-const getTurma = letra => {
+const getTurma = letra =>
+{
     const url = `http://files.cod3r.com.br/curso-js/turma${letra}.json`
-    return new Promise((resolve, reject) => {
-        http.get(url, res => {
+    return new Promise((resolve, reject) =>
+    {
+        http.get(url, res =>
+            {
             let resultado = ''
     
-            res.on('data', dados => {
+            res.on('data', dados =>
+            {
                 resultado += dados
             })
     
             res.on('end', () => {
-                try {
+                try
+                {
                     resolve(JSON.parse(resultado))
                 } catch(e) {
                     reject(e)
@@ -35,11 +40,12 @@ const getTurma = letra => {
          })
      })
  })
-*/~
-
+*/
+console.time("Promise")
 //Lembrando que cada then passa o seu resultado para o próximo
  //Explicando o óbvio abaixo.... só como exercício de fixação
 Promise.all([getTurma('A'), getTurma('B'), getTurma('C')])
+    .then(console.timeEnd("Promise"))
     .then(turmas => [].concat(...turmas)) //Concatena o resultado em um array vazio
     .then(alunos => alunos.map(aluno => aluno.nome)) //Pega o array anterior (já populado) e extrai só os nomes
     .then(nomes => console.log(nomes)) //Mostra o resultado
