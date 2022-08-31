@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Exercícios - HTML
+    </title>
+
+</head>
+
+    <body>
+        
+        <header>
+            Lista de exercícios
+        </header>
+
+        <nav>
+            <br>
+            <a href nav-script="exercícios/teste.html">00 - Teste</a>
+        </nav>
+
+        <section id="conteudo">
+            <!-- Arquivos html são carregados nessa section -->
+        </section>
+
+        <footer>
+
+            <br>
+            CURSO de web moderno
+        </footer>
+        
+        <script>
+            /*
+                Requisição ajax para imprimir arquivos dentro da section conteúdo
+                    Comentários abaixo óbvios (parecem e são), mas os fiz para minha didática como processo mental
+            */
+           //instancia conteudo recebendo o elemento section "conteudo"
+            let conteudo = document.getElementById("conteudo")
+
+            document.querySelectorAll('[nav-script]').forEach(link =>{ 
+                /*  1-captura todas as querys com o atributo nav-script
+                    2-forEach com a callback percorrendo todos eles
+                */
+
+                link.onclick = function(e) //cria uma função para o onclick
+                {
+                    e.preventDefault() //previne comportamento padrão do browser, ou seja, abrir de fato o link
+
+                    fetch(link.getAttribute('nav-script')) //requisição (promise) ajax
+                        .then(resp => resp.text()) //devolve em forma de texto
+                        .then(html => conteudo.innerHTML = html) //aloca dentro de conteudo (já transformando em html)
+                        //podia ter colocado um catch aqui...
+                }
+
+            })
+        </script>
+
+    </body>
+
+</html>
