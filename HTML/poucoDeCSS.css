@@ -1,0 +1,14 @@
+/*
+    #   ->  Refere-se a um id específico
+    .   ->  Refere-se a uma classe
+    tag ->  Escreve-se diretamente para a tag (ver arquivo pocoDeCSS.html)
+*/
+
+#textoPrincipal
+{
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+    background-color: #444;
+}
