@@ -1,0 +1,60 @@
+<table>
+
+    <caption>Produtos</caption>
+
+    <thead>
+        <tr><!--Table Row-->
+            <th>Produto</th><!--Table Head-->
+            <th>Preços</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>IPad</td><!--Table Data-->
+            <td>3289,00</td>
+            <td>5</td>
+            <td>16445,00</td>
+        </tr>
+        <tr>
+            <td>Sansung 22</td>
+            <td>5200,00</td>
+            <td>1</td>
+            <td>5200,00</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">Total</td><!--colspan = ocupar quantas colunas forem necessárias rowspan = ocupar quantas linhas quiser-->
+            <td>21645,00</td>
+        </tr>
+    </tfoot>
+
+</table>
+
+<style>
+    table{
+        border-collapse: collapse;        
+    }
+
+    th, td{
+        padding: 10px;
+    }
+
+    thead {
+        border-bottom: solid 3px #444;
+    }
+
+    tbody :hover{
+        background-color: azure;
+    }
+
+    tfoot {
+        background-color: #444;
+        color: white;
+        font-weight: bold;
+    }
+</style>
